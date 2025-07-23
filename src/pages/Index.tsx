@@ -1,13 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import { AppProvider } from '../contexts/AppContext';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import ServicesSection from '../components/ServicesSection';
+import AboutSection from '../components/AboutSection';
+import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
+import BackToTop from '../components/BackToTop';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <AppProvider>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <HeroSection />
+          <ServicesSection />
+          <AboutSection />
+          <ContactSection />
+        </main>
+        <Footer />
+        <BackToTop />
       </div>
-    </div>
+    </AppProvider>
   );
 };
 
